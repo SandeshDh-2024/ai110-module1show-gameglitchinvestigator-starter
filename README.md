@@ -26,12 +26,24 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+=> The game's purpose is simple. It is a normal number guessing game with three modes. It gives you attempts based on the hardness level. It provides you with a higher or lower based hint after every guess.
 - [ ] Detail which bugs you found.
+=> I found three bugs.
+1. Type mismatch bug
+2. Range validation
+3. New Game State Reset Issues
+
 - [ ] Explain what fixes you applied.
+1. Type mismatch bug: Removed the code that was converting secret to a string on even attempts. This was breaking the comparison logic and causing mismatched hints.
+2. Range validation: The info banner now uses the dynamic low/high values instead of hard coding 1–100.
+The guessing game should no longer let out of range numbers slip through unnoticed.
+3. New Game State Reset Issues: The status of New Game is reset to "playing".
 
 ## 📸 Demo
-
 - [ ] [Insert a screenshot of your fixed, winning game here]
+![alt text](image.png)
+![alt text](image-1.png)
+
 
 ## 🚀 Stretch Features
 
